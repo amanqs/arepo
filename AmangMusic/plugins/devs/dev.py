@@ -1,16 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-# This aeval and sh module is taken from < https://github.com/TheHamkerCat/WilliamButcherBot >
-# Credit goes to TheHamkerCat.
-#
-
 import os
 import re
 import subprocess
@@ -43,7 +30,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("eval")
+    filters.command("ev", [".", "^", "-", "!"])
     & SUDOERS
     & ~filters.forwarded
     & ~filters.via_bot
@@ -51,7 +38,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 async def executor(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
-            message, text="❓ __What command to execute.__"
+            message, text="❓ __Ha?.__"
         )
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
