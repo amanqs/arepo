@@ -43,8 +43,8 @@ RESTART_COMMAND : ["restart"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["msudo"]
-DELSUDO_COMMAND : ["delsudo"]
+ADDSUDO_COMMAND : ["maddsudo"]
+DELSUDO_COMMAND : ["mdelsudo"]
 SUDOUSERS_COMMAND : ["msudolist", "mlistsudo"]
 
 #Broadcast 
@@ -73,8 +73,8 @@ VARS_COMMAND : ["vars", "config"]
 
 
 #Basic Bot Commands
-UPDATE_COMMAND : ["update"]
-REBOOT_COMMAND : ["reboot"]
+UPDATE_COMMAND : ["mupdate"]
+REBOOT_COMMAND : ["mreboot"]
 AUTOEND_COMMAND : ["autoend"]
 
 #Private Bot Mode
