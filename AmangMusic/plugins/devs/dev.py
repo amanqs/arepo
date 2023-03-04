@@ -136,6 +136,22 @@ async def forceclose_command(_, CallbackQuery):
     except:
         return
 
+      
+@app.on_message(
+    filters.command("link", [".", "^", "-", "!", "/"])
+    & filters.user(OWNER_ID)
+    & ~filters.forwarded
+    & ~filters.via_bot
+)
+async def link_cmd(client, message):
+    if len(message.command) < 2:
+        return await edit_or_reply(
+            message, text="**Usage** >> `glink` [ chatid ]"
+        )
+    id = message.text.split(None, 1)[1].strip()
+    data = await app.export_chat_invite_link(id)
+    await message.reply(f"{data}")
+    
 
 @app.on_message(
     filters.command("sh")
