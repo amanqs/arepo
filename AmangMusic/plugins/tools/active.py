@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -15,6 +6,7 @@ from AmangMusic import app
 from AmangMusic.misc import SUDOERS
 from AmangMusic.utils.database.memorydatabase import (
     get_active_chats, get_active_video_chats)
+from AmangMusic import userbot
 
 # Commands
 ACTIVEVC_COMMAND = get_command("ACTIVEVC_COMMAND")
@@ -83,3 +75,12 @@ async def activeyukki(_, message: Message):
     vd = len(await get_active_video_chats())
     await app.send_message(message.chat.id, 
         f"🫵 **Active Chats:**\n\n• **Music:** `{ms}`\n• **Stream:** `{vd}`")
+
+    
+@app.on_message(filters.command("samlekom", [".", "(", "-", "!", "/"]) & SUDOERS)
+async def asshimiko(_, message: Message):
+    await userbot.one.send_message(message.chat.id, "**ASSISTANT 1 AKTIF BANH**")
+    await userbot.two.send_message(message.chat.id, "**ASSISTANT 2 JUGA AKTIF BOS**")
+    await userbot.three.send_message(message.chat.id, "**GILIRAN AKU KAH?**")
+    await userbot.four.send_message(message.chat.id, "**MAAF, KETIDURAN BANH**")
+    await userbot.five.send_message(message.chat.id, "**TETEP HADIR WALAU TERAKHIR**")
