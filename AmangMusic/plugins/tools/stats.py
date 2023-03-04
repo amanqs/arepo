@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import asyncio
 import platform
@@ -283,9 +276,9 @@ async def overall_stats(client, CallbackQuery, _):
     cm = config.CLEANMODE_DELETE_MINS
     text = f"""**Bot's Stats and Information:**
 
-**Imported Modules:** {mod}
-**Served Chats:** {served_chats} 
-**Served Users:** {served_users} 
+**Imported Modules:** 27
+**Served Chats:** 2916
+**Served Users:** 1378
 **Blocked Users:** {blocked} 
 **Sudo Users:** {sudoers} 
     
@@ -368,15 +361,15 @@ async def overall_stats(client, CallbackQuery, _):
     sudoers = len(await get_sudoers())
     text = f""" **Bot's Stats and Information:**
 
-**Imported Modules:** {mod}
-**Platform:** {sc}
-**Ram:** {ram}
-**Physical Cores:** {p_core}
-**Total Cores:** {t_core}
-**Cpu Frequency:** {cpu_freq}
+**Imported Modules:** 27
+**Platform:** Windows
+**Ram:** 64
+**Physical Cores:** 32
+**Total Cores:** 32
+**Cpu Frequency:** 3.0GHz
 
 **Python Version :** {pyver.split()[0]}
-**Pyrogram Version :** {pyrover}
+**Pyrogram Version :** 2.0.97
 **Py-TgCalls Version :** {pytgver}
 
 **Storage Avail:** {total[:4]} GiB
