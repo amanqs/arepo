@@ -23,7 +23,7 @@ async def play_logs(message, streamtype):
 
 ————————
 • **ɢʀᴏᴜᴘ»** {message.chat.title} 
-• ** ɪᴅ ɢʀᴏᴜᴘ»** [`{message.chat.id}`]
+• **ɪᴅ ɢʀᴏᴜᴘ»** [`{message.chat.id}`]
 • **ʟɪɴᴋ»** {chatusername}
 • **ɴᴀᴍᴀ»** {message.from_user.mention}
 • **ᴜsᴇʀɴᴀᴍᴇ»** @{message.from_user.username}
