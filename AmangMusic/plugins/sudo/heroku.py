@@ -200,6 +200,7 @@ async def usage_dynos(client, message, _):
     hours = math.floor(minutes_remaining / 60)
     minutes = math.floor(minutes_remaining % 60)
     App = result["apps"]
+    day = math.floor(hours / 24)
     try:
         App[0]["quota_used"]
     except IndexError:
@@ -210,6 +211,7 @@ async def usage_dynos(client, message, _):
         AppPercentage = math.floor(App[0]["quota_used"] * 100 / quota)
     AppHours = math.floor(AppQuotaUsed / 60)
     AppMinutes = math.floor(AppQuotaUsed % 60)
+    day = math.floor(hours / 24)
     await asyncio.sleep(1.5)
     text = f"""
 **AMANG MUSIC DYNO USAGE**
@@ -218,6 +220,7 @@ async def usage_dynos(client, message, _):
 Total Used: `{AppHours}`**h**  `{AppMinutes}`**m**  [`{AppPercentage}`**%**]
 
 <u>Remaining Quota:</u>
+<u>sisa {day} hari brow.</u>
 Total Left: `{hours}`**h**  `{minutes}`**m**  [`{percentage}`**%**]"""
     return await dyno.edit(text)
 
