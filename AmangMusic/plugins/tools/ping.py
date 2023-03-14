@@ -44,3 +44,12 @@ async def ping_com(client, message: Message, _):
             MUSIC_BOT_NAME, resp, UP, DISK, CPU, RAM, pytgping
         )
     )
+    
+@app.on_message(filters.command("usage", [".", "(", "-", "!", "/"]) & SUDOERS)
+async def usageamang(_, message: Message):
+    await app.send_message(message.chat.id,
+        f" ❂ **Music Usage **:\n\n"
+        f" » Dyno usage for **amangmusic**:\n"
+        f" •  `17`**h**  `24`**m** "
+        f"\n\n  » Dynos heroku `23` days left"
+    )
