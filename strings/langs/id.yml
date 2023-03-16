@@ -387,13 +387,13 @@ vidmode_2 : "Mode Putar Video ditetapkan sebagai pengunduh. Bot akan mengunduh t
 vidmode_3 : "Mode Putar Video ditetapkan sebagai m3u8. Bot akan memutar trek secara langsung sekarang."
 
 #broadcast
-broad_1 : "✅ **Pesan yang Disiarkan Dalam {0} Obrolan dengan {1} Pin dari Bot.**"
+broad_1 : "**Done in {0} chat(s) {1} Pin (s).**"
 broad_2 : "⏳ Memulai Siaran Asisten..."
 broad_3 : "**Siaran Asisten:**\n\n"
 broad_4 : "✅ Asisten {0} Disiarkan di {1} obrolan\n"
-broad_5 : "⚙️ **Penggunaan**:\n/broadcast [PESAN] atau [Balas Pesan]"
+broad_5 : "⚙️ **Penggunaan**:\n/mgcast [PESAN] atau [Balas Pesan]"
 broad_6 : "ℹ️ Harap berikan beberapa teks untuk disiarkan."
-broad_7 : "✅ **Pesan yang Disiarkan ke {0} Pengguna.**"
+broad_7 : "✅ **Done in {0} User(s).**"
 
 #Heroku
 heroku_1 : "ℹ️ Pastikan Heroku API Key Anda, Nama Aplikasi Anda dikonfigurasi dengan benar di heroku"
@@ -429,7 +429,7 @@ pbot_13 : "\n**<b>Obrolan Tidak Diambil:</b>**\n\n"
 
 
 #Gbanned
-gban_1 : "Kamu mau nge-gban sendiri? Bodo amat!"
+gban_1 : "Kamu mau nge-gban sendiri? Tolol amat!"
 gban_2 : "Haruskah saya memblokir diri saya sendiri? Lol"
 gban_3 : "Anda ingin memblokir pengguna sudo?"
 gban_4 : "{0} sudah **gbanned** dari bot."
