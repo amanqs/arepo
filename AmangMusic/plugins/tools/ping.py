@@ -52,5 +52,5 @@ async def usageamang(_, message: Message):
         f" ❂ **Music Usage **:\n\n"
         f" » Dyno usage for **amangmusic**:\n"
         f" •  `17`**h**  `24`**m** "
-        f"\n\n  » Dynos heroku `23` days left"
+        f"\n\n  » Dynos heroku {UP} days left"
     )
