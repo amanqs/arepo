@@ -18,6 +18,7 @@ from AmangMusic import app
 from AmangMusic.core.call import Amang
 from AmangMusic.utils import bot_sys_stats
 from AmangMusic.utils.decorators.language import language
+from AmangMusic.misc import SUDOERS
 
 ### Commands
 PING_COMMAND = get_command("PING_COMMAND")
