@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 from datetime import datetime
 
 from pyrogram import filters
@@ -48,6 +39,7 @@ async def ping_com(client, message: Message, _):
     
 @app.on_message(filters.command("usage", [".", "(", "-", "!", "/"]) & SUDOERS)
 async def usageamang(_, message: Message):
+    UP = await bot_sys_stats()
     await app.send_message(message.chat.id,
         f" ❂ **Music Usage **:\n\n"
         f" » Dyno usage for **amangmusic**:\n"
