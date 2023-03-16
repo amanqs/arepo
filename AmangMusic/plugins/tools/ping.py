@@ -8,6 +8,7 @@ from strings import get_command
 from AmangMusic import app
 from AmangMusic.core.call import Amang
 from AmangMusic.utils import bot_sys_stats
+from AmangMusic.utils import bot_sys_uptime
 from AmangMusic.utils.decorators.language import language
 from AmangMusic.misc import SUDOERS
 
@@ -39,7 +40,7 @@ async def ping_com(client, message: Message, _):
     
 @app.on_message(filters.command("usage", [".", "(", "-", "!", "/"]) & SUDOERS)
 async def usageamang(_, message: Message):
-    UP = await bot_sys_stats()
+    UP = await bot_sys_uptime()
     await app.send_message(message.chat.id,
         f" ❂ **Music Usage **:\n\n"
         f" » Dyno usage for **amangmusic**:\n"
