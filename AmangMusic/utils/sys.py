@@ -29,5 +29,4 @@ async def bot_sys_stats():
 
 async def bot_sys_uptime():
     bot_uptime = int(time.time() - _boot_)
-    UP = f"{get_readable_time((bot_uptime))}"
-    return UP
+    return f"{get_readable_time(bot_uptime)}"
