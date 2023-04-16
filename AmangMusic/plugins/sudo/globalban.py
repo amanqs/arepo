@@ -1,7 +1,7 @@
 import asyncio
 import time
 import os
-import shutill
+import shutil
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
