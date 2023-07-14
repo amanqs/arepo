@@ -58,7 +58,7 @@ class Userbot(Client):
             await self.one.start()
             try:
                 await self.one.join_chat("amwangs")
-                await self.one.join_chat("amangsupportgrup")
+                await self.one.join_chat("amwangsupport")
                 await self.one.join_chat("amangproject")
             except:
                 pass
@@ -89,7 +89,7 @@ class Userbot(Client):
             await self.two.start()
             try:
                 await self.two.join_chat("amwangs")
-                await self.two.join_chat("amangsupportgrup")
+                await self.two.join_chat("amwangsupport")
                 await self.two.join_chat("amangproject")
             except:
                 pass
@@ -120,7 +120,7 @@ class Userbot(Client):
             await self.three.start()
             try:
                 await self.three.join_chat("amwangs")
-                await self.three.join_chat("amangsupportgrup")
+                await self.three.join_chat("amwangsupport")
                 await self.three.join_chat("amangproject")
             except:
                 pass
@@ -151,7 +151,7 @@ class Userbot(Client):
             await self.four.start()
             try:
                 await self.four.join_chat("amwangs")
-                await self.four.join_chat("amangsupportgrup")
+                await self.four.join_chat("amwangsupport")
                 await self.four.join_chat("amangproject")
             except:
                 pass
@@ -182,7 +182,7 @@ class Userbot(Client):
             await self.five.start()
             try:
                 await self.five.join_chat("amwangs")
-                await self.five.join_chat("amangsupportgrup")
+                await self.five.join_chat("amwangsupport")
                 await self.five.join_chat("amangproject")
             except:
                 pass
