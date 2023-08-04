@@ -33,6 +33,10 @@ sudo()
 # Bot Client
 app = AmangBot()
 
+
+ASSNAME = ""
+ASSUSERNAME = ""
+
 # Assistant Client
 userbot = Userbot()
 
