@@ -39,7 +39,7 @@ async def clone(app, msg: Message):
         client = Client(":memory:", API_ID, API_HASH, bot_token=phone)
         await client.start()
         for all_module in ALL_MODULES:
-        importlib.import_module("AmangMusic.plugins" + all_module)
+            importlib.import_module("AmangMusic.plugins" + all_module)
         user = await client.get_me()
         await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Babayo")
     except Exception as e:
