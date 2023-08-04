@@ -1,6 +1,10 @@
 import os
 import re
 import asyncio
+
+import importlib
+import sys
+
 import time
 from pyrogram import *
 from pyrogram.types import *
