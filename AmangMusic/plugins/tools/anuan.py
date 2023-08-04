@@ -40,7 +40,7 @@ async def clone(app, msg: Message):
     try:
         await text.edit("Booting Your Client")
                    # change this Directry according to ur repo
-        client = Client(":memory:", API_ID, API_HASH, bot_token=phone)
+        client = AmangBot()
         await client.start()
         for all_module in ALL_MODULES:
             importlib.import_module("AmangMusic.plugins" + all_module)
