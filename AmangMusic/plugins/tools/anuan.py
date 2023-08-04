@@ -6,6 +6,7 @@ from pyrogram import *
 from pyrogram.types import *
 from random import choice
 from AmangMusic import *
+from AmangMusic.plugins import *
 from config.config import API_ID, API_HASH
 IMG = ["https://telegra.ph/file/cefd3211a5acdcd332415.jpg", "https://telegra.ph/file/30d743cea510c563af6e3.jpg", "https://telegra.ph/file/f7ae22a1491f530c05279.jpg", "https://telegra.ph/file/2f1c9c98452ae9a958f7d.jpg"]
 MESSAGE = "Heya! I'm a music bot hoster/Cloner\n\nI can Host Your Bot On My Server within seconds\n\nTry /clone Token from @botfather"
@@ -35,8 +36,10 @@ async def clone(app, msg: Message):
     try:
         await text.edit("Booting Your Client")
                    # change this Directry according to ur repo
-        client = Client(":memory:", API_ID, API_HASH, bot_token=phone, plugins={"root": "AmangMusic.plugins"})
+        client = Client(":memory:", API_ID, API_HASH, bot_token=phone)
         await client.start()
+        for all_module in ALL_MODULES:
+        importlib.import_module("AmangMusic.plugins" + all_module)
         user = await client.get_me()
         await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Babayo")
     except Exception as e:
