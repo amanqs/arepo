@@ -4,7 +4,7 @@ import asyncio
 
 import importlib
 import sys
-
+from AmangMusic.core.bot import AmangBot
 import time
 from pyrogram import *
 from pyrogram.types import *
