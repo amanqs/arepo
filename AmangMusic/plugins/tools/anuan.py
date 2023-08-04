@@ -12,7 +12,7 @@ IMG = ["https://telegra.ph/file/cefd3211a5acdcd332415.jpg", "https://telegra.ph/
 MESSAGE = "Heya! I'm a music bot hoster/Cloner\n\nI can Host Your Bot On My Server within seconds\n\nTry /clone Token from @botfather"
 
 @app.on_message(filters.private & filters.command("start"))
-async def hello(client, message: Message):
+async def hello(app, message: Message):
     buttons = [
            [
                 InlineKeyboardButton("✘ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url="t.me/TheUpdatesChannel"),
@@ -22,7 +22,7 @@ async def hello(client, message: Message):
             ],
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await client.send_photo(message.chat.id, f"{choice(IMG)}", caption=MESSAGE, reply_markup=reply_markup)
+    await app.send_photo(message.chat.id, f"{choice(IMG)}", caption=MESSAGE, reply_markup=reply_markup)
 
 ##Copy from here 
 
