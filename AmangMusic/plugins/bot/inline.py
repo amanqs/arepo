@@ -14,9 +14,9 @@ from youtubesearchpython.__future__ import VideosSearch
 
 from config import BANNED_USERS, MUSIC_BOT_NAME
 from AmangMusic import app
-from AmangMusic.utils.inlinequery import answer
+#from AmangMusic.utils.inlinequery import answer
 
-
+answer = []
 @app.on_inline_query(~BANNED_USERS)
 async def inline_query_handler(client, query):
     text = query.query.strip().lower()
